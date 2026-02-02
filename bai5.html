@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>HR Management</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    h2 {
+      margin-bottom: 10px;
+    }
+    .top-bar {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 10px;
+    }
+    .top-bar input {
+      padding: 5px;
+    }
+    .btn {
+      padding: 5px 10px;
+      border: none;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+    .btn-add {
+      background-color: #4CAF50;
+      color: white;
+    }
+    .btn-edit {
+      background-color: #FFD700;
+      color: black;
+    }
+    .btn-delete {
+      background-color: #FF4500;
+      color: white;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 20px;
+    }
+    th, td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: center;
+    }
+    th {
+      background-color: #f2f2f2;
+    }
+    .form-container {
+      border: 1px solid #ddd;
+      padding: 15px;
+      width: 400px;
+    }
+    .form-container label {
+      display: block;
+      margin-top: 10px;
+    }
+    .form-container input, 
+    .form-container select {
+      width: 100%;
+      padding: 6px;
+      margin-top: 4px;
+    }
+    .form-container .radio-group {
+      margin-top: 6px;
+    }
+    .form-container .btn {
+      margin-top: 10px;
+      margin-right: 5px;
+    }
+  </style>
+</head>
+<body>
+  <h2>HR Management</h2>
+  <div class="top-bar">
+    <button class="btn btn-add">+ Add</button>
+    <div>
+      <input type="text" placeholder="Search...">
+      <button class="btn">Search</button>
+    </div>
+  </div>
+
+  <table>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Phone</th>
+      <th>Position</th>
+      <th>Action</th>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>Fatima Beatriz</td>
+      <td>FatimaBeatriz@gmail.com</td>
+      <td>0985674321</td>
+      <td>Staff</td>
+      <td>
+        <button class="btn btn-edit">Edit</button>
+        <button class="btn btn-delete">Delete</button>
+      </td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Gabriel Hanna</td>
+      <td>GabrielHanna@gmail.com</td>
+      <td>0353674231</td>
+      <td>Staff</td>
+      <td>
+        <button class="btn btn-edit">Edit</button>
+        <button class="btn btn-delete">Delete</button>
+      </td>
+    </tr>
+    <!-- Thêm các dòng khác tương tự -->
+  </table>
+
+  <div class="form-container">
+    <h3>New Employee</h3>
+    <form>
+      <label>Name:</label>
+      <input type="text" name="name">
+
+      <label>Email:</label>
+      <input type="email" name="email">
+
+      <label>Phone:</label>
+      <input type="text" name="phone">
+
+      <label>Position:</label>
+      <select name="position">
+        <option>-- Select Position --</option>
+        <option>Staff</option>
+        <option>Manager</option>
+        <option>CEO</option>
+      </select>
+
+      <label>Sex:</label>
+      <div class="radio-group">
+        <input type="radio" name="sex" value="Male"> Male
+        <input type="radio" name="sex" value="Female"> Female
+      </div>
+
+      <button class="btn btn-add">Save</button>
+      <button class="btn">Cancel</button>
+    </form>
+  </div>
+</body>
+</html>
